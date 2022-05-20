@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  checkin_time: 2022-05-02 11:16:34
+  checkout_time: 2022-05-02 11:16:34
+  status: MyString
+  working_hours: MyString
+  user: one
+
+two:
+  checkin_time: 2022-05-02 11:16:34
+  checkout_time: 2022-05-02 11:16:34
+  status: MyString
+  working_hours: MyString
+  user: two

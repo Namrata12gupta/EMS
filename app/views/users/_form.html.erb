@@ -1,0 +1,94 @@
+<%= form_with model: @user do |form| %>
+  <div>
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name%>
+     <% @user.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :father_name %><br>
+    <%= form.text_field :father_name  %>
+  </div>
+
+  <div>
+    <%= form.label :mother_name %><br>
+    <%= form.text_field :mother_name  %>
+  </div>
+
+  <div>
+    <%= form.label :company_name %><br>
+    <%= form.text_field :company_name  %>
+  </div>
+
+  <div>
+    <%= form.label :designation %><br>
+    <%= form.text_field :designation %>
+  </div>
+
+  <div>
+    <%= form.label :country %><br>
+    <%= form.text_field :country %>
+  </div>
+
+  <div>
+    <%= form.label :address %><br>
+    <%= form.text_field :address  %>
+  </div>
+
+  <div>
+    <%= form.label :phone_no %><br>
+    <%= form.text_field :phone_no  %>
+  </div>
+
+  <div>
+    <%= form.label :primary_skill %><br>
+    <%= form.text_field :primary_skill  %>
+  </div>
+
+  <div>
+    <%= form.label :pan_card %><br>
+    <%= form.text_field :pan_card  %>
+  </div>
+
+  <div>
+    <%= form.label :adhar_card %><br>
+    <%= form.text_field :adhar_card  %>
+  </div>
+
+  <div>
+    <%= form.label :bank_name %><br>
+    <%= form.text_field :bank_name  %>
+  </div>
+
+  <div>
+    <%= form.label :account_no %><br>
+    <%= form.text_field :account_no  %>
+  </div>
+  <div>
+    <%= form.label :email %><br>
+    <%= form.email_field :email  %>
+  </div>
+   <div>
+    <%= form.label :password %><br>
+    <%= form.text_field :password  %>
+  </div>
+  <div>
+    <%= form.label :password_confirmation %><br>
+    <%= form.text_field :password_confirmation %>
+  </div>
+  <div>
+  
+  <%= form.collection_select :role_id, Role.all, :id, :role_type  %>
+  </div><br>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

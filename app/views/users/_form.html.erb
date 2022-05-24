@@ -84,6 +84,10 @@
     <%= form.text_field :password_confirmation %>
   </div>
   <div>
+    <%= form.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= form.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+  <div>
   
   <%= form.collection_select :role_id, Role.all, :id, :role_type  %>
   </div><br>

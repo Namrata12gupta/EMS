@@ -3,7 +3,7 @@
 class Attendance < ApplicationRecord
   belongs_to :user
   before_update :total_working_hours
-  paginates_per 3
+  paginates_per 5
 
   private
 

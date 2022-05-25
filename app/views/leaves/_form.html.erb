@@ -1,34 +1,38 @@
-<div class="card" style="width: 70rem; left: 5rem; ">
-<div class="card-body" >
-<%= form_with model: @leave do |form| %>
+<div class="card" style="width: 55rem; left: 5rem; ">
+	<div class="card-body" >
+	<%= form_with model: @leave do |form| %>
 
+	<div>
+		<%= form.label :from_date %><br>
+	    <%= form.date_field :from_date %>
+	    <% @leave.errors.full_messages_for(:from_date).each do |message| %>
+      	<div><%= message %></div>
+   		<% end %>
+	</div>
 
-<div>
-	<%= form.label :from_date %><br>
-    <%= form.date_field :from_date %>
+	<div>
+		<%= form.label :till_date %><br>
+		<%= form.date_field :till_date %>
+	</div>
+
+	<div>
+		<%= form.label :total_days %><br>
+		<%= form.text_field :total_days %>
+	</div>
+
+	<div>
+		<%= form.label :reason %><br>
+		<%= form.text_field :reason %>
+	</div><br>
+
+	<div>
+	<%= form.select :leave_type, [" Sick Leave", "Marriage Leave", "Casual Leave", "Optional Leave"]%>
+	</div>
+
+	<div>
+	  <%= form.submit %>
+	</div>
+	<%= form.hidden_field :user_id, value: current_user.id %>
+	<% end %>
+	</div>
 </div>
-
-<div>
-	<%= form.label :till_date %><br>
-	<%= form.date_field :till_date %>
-</div>
-
-<div>
-	<%= form.label :total_days %><br>
-	<%= form.text_field :total_days %>
-</div>
-
-<div>
-	<%= form.label :reason %><br>
-	<%= form.text_field :reason %>
-</div><br>
-
-<div>
-<%= form.select :leave_type, [" Sick Leave", "Marriage Leave", "Casual Leave", "Optional Leave"]%>
-</div>
-
-<div>
-  <%= form.submit %>
-</div>
-<%= form.hidden_field :user_id, value: current_user.id %>
-<% end %></div></div>

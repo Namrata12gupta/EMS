@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  devise :database_authenticatable, # :registerable,
+  devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
   has_many :attendances, dependent: :destroy
@@ -9,7 +9,4 @@ class User < ApplicationRecord
   has_many :daily_statuses
   has_one_attached :image, dependent: :destroy
   has_many :leaves
-
-  # validates :name, presence: true
-  validates :name, presence: { message: 'must be given please' }
 end

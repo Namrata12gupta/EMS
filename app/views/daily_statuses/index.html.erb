@@ -1,25 +1,30 @@
-<div class="card" style="width: 70rem; left: 5rem; ">
-<div class="card-body" >
-<h5 style="color:blue">Daily Status</h5>
-<table class="table table-bordered border-primary">
-  <thead>
-    <tr>
-<% current_user.daily_statuses.each do |d| %>
-  <th scope="col">Today Status:</th>
-  <th scope="col">date:</th>
-</tr>
-</thead>
-<tbody>
-  <tr>
-  <td><%= d.daily_status %></td>
-  <td><%= link_to "Edit", edit_daily_status_path(d) %></td>
-</tr>
-<% end %>
-</tr></tbody></table>
+<div class="card" style="width: 60rem; left: 3rem; ">
+  <div class="card-body" >
+    <h5 style="color:blue; margin-left: 25rem;">Daily Status</h5>
+    <table class="table table-bordered border-primary">
+      <thead>
+        <tr>
+          <% current_user.daily_statuses.each do |d| %>
+          <th scope="col">Today Status:</th>
+          <th scope="col">Date:</th>
+        </tr>
+      </thead>
+        <tbody>
+          <tr>
+            <td><%= d.daily_status %></td>
+            <td><%= d.date %></td>
+            <td><%= link_to "Edit", edit_daily_status_path(d) %></td>
+          </tr>
+          <% end %>
+          </tr>
+        </tbody>
+      </table>
 
-<div>
-<h5 style="color:blue">Add a daily status:</h5>
-<%= render 'daily_statuses/form' %></div></div>
+      <div>
+        <h5 style="color:blue">Add a daily status:</h5>
+      <%= render 'daily_statuses/form' %>
+     </div>
+  </div>
 </div>
 
   

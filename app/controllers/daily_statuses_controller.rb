@@ -3,7 +3,8 @@
 class DailyStatusesController < ApplicationController
 
   def create
-    daily_status = current_user.daily_statuses.create(date: params[:date], daily_status: params[:daily_status])
+    date = Date.today
+    daily_status = current_user.daily_statuses.create(date: date, daily_status: params[:daily_status])
     redirect_to daily_statuses_path
   end
   
@@ -13,16 +14,18 @@ class DailyStatusesController < ApplicationController
   end
 
   def update
-    @daily_status =DailyStatus.find_by_id params[:id]
-    if @daily_status.update(daily_status_params)
-      redirect_to user_path(current_user)
-    else
-      render :edit
-    end
-  end
+    daily_status= current_user.daily_statuses.last.update(daily_status_params)
+    redirect_to daily_statuses_path
+   end
+
 
   private
   def daily_status_params
-     params.require(:daily_status).permit(:daily_status)
+     params.require(:daily_status).permit(:daily_status,:date)
   end
 end
+
+
+
+
+

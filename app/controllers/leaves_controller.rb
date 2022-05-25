@@ -1,19 +1,22 @@
 # frozen_string_literal: true
 
 class LeavesController < ApplicationController
+  def index
+    @leaves = Leave.all
+  end
+
   def show
     @leave = Leave.find(params[:id])
   end
 
   def new
-    @leaves = Leave.all
     @leave = Leave.new
   end
 
   def create
     @leave = Leave.new(leave_params)
     if @leave.save
-      redirect_to @leave
+      redirect_to leaves_path
     else
       render :new
     end

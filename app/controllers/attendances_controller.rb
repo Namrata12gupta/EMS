@@ -12,6 +12,6 @@ class AttendancesController < ApplicationController
 
   def update
     attendance = current_user.attendances.last.update(checkout_time: Time.zone.now)
-    redirect_to user_path(current_user)
+    redirect_to user_attendance_path
   end
 end

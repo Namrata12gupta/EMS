@@ -3,6 +3,7 @@
 class Leave < ApplicationRecord
   belongs_to :user
   validate :not_past_date
+  enum :leave_status, [ :accepted, :rejected, :cancel ]
 
   def not_past_date
     if self.from_date < Date.today
@@ -10,3 +11,4 @@ class Leave < ApplicationRecord
     end
   end
 end
+

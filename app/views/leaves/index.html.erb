@@ -10,6 +10,7 @@
 		      <th scope="col">Till Date</th>
 		      <th scope="col">Total Days</th>
 		      <th scope="col">Reason</th>
+		      <th scope="col">Leave Status</th>
 		    </tr>
 		  </thead>
 		  <tbody>
@@ -20,6 +21,8 @@
 		      <td><%= leave.till_date %></td>
 		      <td><%= leave.total_days %></td>
 		      <td><%= leave.reason %></td>
+		    <td><%= leave.leave_status %></td> 
+		      <td><%#= button_to 'Accept', leafe_path(current_user) %></td>
 		    </tr>
 		  </tbody>
 		  <% end %>

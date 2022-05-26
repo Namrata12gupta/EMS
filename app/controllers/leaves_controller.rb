@@ -22,6 +22,12 @@ class LeavesController < ApplicationController
     end
   end
 
+  def update
+    @leave = Leave.find(params[:id])
+    @leave.update(leave_status: params[:leave_status])
+    redirect_to leaves_path
+  end
+
   def leave_params
     params.require(:leave).permit(:leave_type, :from_date, :till_date, :leave_starts, :leave_end, :total_days,
                                   :reason, :user_id)

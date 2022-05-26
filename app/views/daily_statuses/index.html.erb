@@ -1,7 +1,7 @@
-<div class="card" style="width: 60rem; left: 3rem; ">
+<div class="card" style="width: 70rem;">
   <div class="card-body" >
-    <h5 style="color:blue; margin-left: 25rem;">Daily Status</h5>
-    <table class="table table-bordered border-primary">
+    <h5 style="color: black; margin-left: 32rem;">Daily Status</h5>
+    <table class="table table-bordered border-dark">
       <thead>
         <tr>
           <% current_user.daily_statuses.each do |d| %>
@@ -21,7 +21,7 @@
       </table>
 
       <div>
-        <h5 style="color:blue">Add a daily status:</h5>
+        <h5 style="color:black">Add a daily status:</h5>
       <%= render 'daily_statuses/form' %>
      </div>
   </div>

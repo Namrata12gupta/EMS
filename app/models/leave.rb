@@ -2,7 +2,7 @@
 
 class Leave < ApplicationRecord
   belongs_to :user
-  validate :not_past_date
+  validate :not_past_date , on: :create
   enum :leave_status, [ :accepted, :rejected, :cancel ]
 
   def not_past_date

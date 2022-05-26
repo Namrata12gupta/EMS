@@ -6,7 +6,7 @@
 		<%= form.label :from_date %><br>
 	    <%= form.date_field :from_date %>
 	    <% @leave.errors.full_messages_for(:from_date).each do |message| %>
-      	<div><%= message %></div>
+      	<div style="color: red;"><%= message %></div>
    		<% end %>
 	</div>
 
@@ -27,10 +27,6 @@
 
 	<div>
 	<%= form.select :leave_type, [" Sick Leave", "Marriage Leave", "Casual Leave", "Optional Leave"]%>
-	</div>
-
-	<div>
-		<%= form.input_field :leave_status, as: :hidden, value: Leave.leave_status[:accepted, :rejected, :cancel] %>
 	</div>
 
 	<div>

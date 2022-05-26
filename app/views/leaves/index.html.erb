@@ -1,7 +1,7 @@
-<div class="card" style="margin-left: 10rem; width: 50rem;">
+<div class="card" style="width: 70rem;">
   <div class="card-body">
 	<h1>Leaves</h1>
-		<div style="margin-left: 38rem;"><%= button_to "Apply For Leave ", new_leafe_path(user_id: current_user.id),method: :get %></div><br>
+		<div style="margin-left: 55rem;"><%= button_to "Apply For Leave ", new_leafe_path(user_id: current_user.id),method: :get %></div><br>
 		<table class="table table-bordered border-primary">
 		  <thead>
 		    <tr>
@@ -21,8 +21,14 @@
 		      <td><%= leave.till_date %></td>
 		      <td><%= leave.total_days %></td>
 		      <td><%= leave.reason %></td>
-		    <td><%= leave.leave_status %></td> 
-		      <td><%#= button_to 'Accept', leafe_path(current_user) %></td>
+		     	<td><%= leave.leave_status %></td>  
+
+		      <td><%= button_to 'Accept', leafe_path(leave, leave_status: 'accepted'), method: :put %></td> 
+
+		      <td><%= button_to 'Reject', leafe_path(leave, leave_status: 'rejected'), method: :put %></td> 
+
+		      <td><%= button_to 'Cancel', leafe_path(leave, leave_status: 'cancel'), method: :put %></td> 
+
 		    </tr>
 		  </tbody>
 		  <% end %>

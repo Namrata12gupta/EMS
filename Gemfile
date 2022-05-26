@@ -80,3 +80,4 @@ gem 'rubocop-rails', require: false
 gem "twitter-bootstrap-rails"
 gem 'jquery-rails'
 gem 'activeadmin', '~> 2.6', '>= 2.6.1'
+gem "breadcrumbs_on_rails"

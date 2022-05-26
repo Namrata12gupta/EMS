@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class DailyStatusesController < ApplicationController
+
   def create
     daily_status = current_user.daily_statuses.create(date: params[:date], daily_status: params[:daily_status])
     redirect_to daily_statuses_path

@@ -2,12 +2,11 @@
 
 class UsersController < ApplicationController
   def index
-    @users = User.all.with_attached_image
+    @users = User.all
   end
 
   def show
     @user = User.find(params[:id])
-    @daily_status = DailyStatus.all
   end
 
   def new
@@ -24,13 +23,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = current_user
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = current_user
     if @user.update(user_params)
-      redirect_to @user
+      redirect_to root_path
     else
       render :edit
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_23_091134) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_26_070707) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -113,6 +113,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_23_091134) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+    t.integer "leave_status"
     t.index ["user_id"], name: "index_leaves_on_user_id"
   end
 

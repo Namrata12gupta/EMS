@@ -1,0 +1,32 @@
+<div class="card" style="margin-left: 10rem; width: 50rem;">
+  <div class="card-body">
+	<h1>Leaves</h1>
+		<div style="margin-left: 38rem;"><%= button_to "Apply For Leave ", new_leafe_path(user_id: current_user.id),method: :get %></div><br>
+		<table class="table table-bordered border-primary">
+		  <thead>
+		    <tr>
+		      <th scope="col">Leave Type</th>
+		      <th scope="col">From Date</th>
+		      <th scope="col">Till Date</th>
+		      <th scope="col">Total Days</th>
+		      <th scope="col">Reason</th>
+		      <th scope="col">Leave Status</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		  	<% @leaves.each do |leave| %>
+		    <tr>
+		      <td><%= leave.leave_type %></td>
+		      <td><%= leave.from_date %></td>
+		      <td><%= leave.till_date %></td>
+		      <td><%= leave.total_days %></td>
+		      <td><%= leave.reason %></td>
+		    <td><%= leave.leave_status %></td> 
+		      <td><%#= button_to 'Accept', leafe_path(current_user) %></td>
+		    </tr>
+		  </tbody>
+		  <% end %>
+		</table>
+  	</div>
+</div>
+

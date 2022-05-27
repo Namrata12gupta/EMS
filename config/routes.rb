@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   resources :roles
   resources :daily_statuses
   resources :leaves
+
+  namespace :hr do
+ resources :leaves
+end
 end
 
 

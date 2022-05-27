@@ -15,3 +15,6 @@ class AttendancesController < ApplicationController
     redirect_to user_attendance_path
   end
 end
+
+
+

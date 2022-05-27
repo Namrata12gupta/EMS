@@ -3,7 +3,7 @@
 class Attendance < ApplicationRecord
   belongs_to :user
   before_update :total_working_hours
-  paginates_per 20
+  paginates_per 5
 
   private
 
@@ -15,3 +15,6 @@ class Attendance < ApplicationRecord
     self.working_hours = "#{hours} hour : #{minutes} minutes : #{seconds} seconds"
   end
 end
+
+
+

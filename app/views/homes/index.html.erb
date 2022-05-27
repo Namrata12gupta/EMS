@@ -1,0 +1,112 @@
+<h1>Hello! Simplly Alliance Teams..</h1>
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Company Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Company - v4.7.0
+  * Template URL: https://bootstrapmade.com/company-free-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+<body>
+
+<%=image_tag("simplly.jpeg")%>
+<footer id="footer">
+ <!--  <header id="header" class="fixed-top"> -->
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <div class="header-social-links d-flex">
+        <a href="#" class="twitter"><i class="bu bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bu bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bu bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bu bi-linkedin"></i></i></a>
+      </div>
+ <!-- End Header -->
+
+  <!-- ======= Footer ======= -->
+ 
+    <div class="footer-bottom" style="margin-bottom: 25rem;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Company</h3>
+            <p>
+              <p>Simplly Alliance Software solution prvivate limited(SASS)<p>
+              608,NRK BIZPARK Building,PU4,Behind C21 Mall Indore(M.P)<br>
+              <strong>Phone:</strong><%= current_user.phone_no %><br>
+              <strong>Email:</strong><%= current_user.email %><br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links"style="margin-left: 10rem;">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= root_path %>">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= "/users/:user_id/attendances/:id" %>">Attendance</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%=daily_statuses_path %>">DailyStatus</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= leaves_path(current_user.id) %>">LeaveStatus</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= "/users/:id/edit"%>">EditUser</a></li>
+              <%if current_user.role.role_type == 'HR' %>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= hr_leaves_path %>">HR</a></li>
+              <% end %>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= "/users"%>">Profile</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links" style="margin-left: 5rem;">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Software Developer</a></li>
+            </ul>
+          </div>
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+</body>
+</html>

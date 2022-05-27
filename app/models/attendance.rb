@@ -15,6 +15,3 @@ class Attendance < ApplicationRecord
     self.working_hours = "#{hours} hour : #{minutes} minutes : #{seconds} seconds"
   end
 end
-
-
-

@@ -7,8 +7,13 @@
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           	<% if user_signed_in? %>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/users">Home</a>
+              <a class="nav-link active" aria-current="page" href= "<%= root_path %> ">Home</a>
             </li>
+
+            <li class="nav-item">
+              <a class="nav-link"  href="/users">Profile</a>
+            </li>
+
 
             <li class="nav-item">
               <a class="nav-link" href="<%= "/users/:user_id/attendances/:id" %>">Attendance</a>
@@ -23,7 +28,7 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<%= "/users/:id/edit"%>">Edit</a>
+              <a class="nav-link" href="<%= "/users/:id/edit"%>">EditUser</a>
             </li>
 
             <%if current_user.role.role_type == 'HR' %>
@@ -32,15 +37,40 @@
             </li>
             <% end %>
 
-          </ul>
-        </div>
-        <%= link_to 'Sign_out', destroy_user_session_path, data: {
+              <img style= "height: 3rem; wedith: 3rem; margin-left: 29rem;" <%=image_tag("simplly.jpeg")%> 
+
+            <%= link_to 'Sign_out', destroy_user_session_path, data: {
                             turbo_method: :delete,
                             turbo_confirm: "Are you sure?"
                           } %>
-      <% end %>
+            <% end %>
+
+          
+
+        
+          </ul>
+        </div>
+        
   </div>
 </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

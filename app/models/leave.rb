@@ -2,13 +2,10 @@
 
 class Leave < ApplicationRecord
   belongs_to :user
-  validate :not_past_date , on: :create
-  enum :leave_status, [ :accepted, :rejected, :cancel ]
+  validate :not_past_date, on: :create
+  enum :leave_status, %i[accepted rejected cancel]
 
   def not_past_date
-    if self.from_date < Date.today
-      errors.add(:from_date, 'not in past')
-    end
+    errors.add(:from_date, 'not in past') if from_date < Date.today
   end
 end
-

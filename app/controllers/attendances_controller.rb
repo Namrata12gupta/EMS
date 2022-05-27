@@ -7,7 +7,7 @@ class AttendancesController < ApplicationController
 
   def create
     attendance = current_user.attendances.create(checkin_time: Time.zone.now)
-    redirect_to user_path(attendance)
+    redirect_to user_attendance_path(id: attendance.id)
   end
 
   def update

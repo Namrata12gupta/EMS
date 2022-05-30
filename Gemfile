@@ -82,3 +82,5 @@ gem 'jquery-rails'
 gem 'kaminari'
 gem 'rubocop-rails', require: false
 gem 'twitter-bootstrap-rails'
+gem 'jquery-rails'
+gem 'bootstrap-sass'

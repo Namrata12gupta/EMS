@@ -6,7 +6,8 @@ class LeavesController < ApplicationController
   end
 
   def show
-    @leave = Leave.find(params[:id])
+    # @leave = Leave.find(params[:id])
+    @leave = current_user
   end
 
   def new

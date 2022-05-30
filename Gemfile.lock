@@ -81,10 +81,15 @@ GEM
       activesupport (>= 3.0.0, < 7.1)
       ruby2_keywords (>= 0.0.2, < 1.0)
     ast (2.4.2)
+    autoprefixer-rails (10.4.7.0)
+      execjs (~> 2)
     bcrypt (3.1.17)
     bindex (0.8.1)
     bootsnap (1.11.1)
       msgpack (~> 1.2)
+    bootstrap-sass (3.4.1)
+      autoprefixer-rails (>= 5.2.1)
+      sassc (>= 2.0.0)
     breadcrumbs_on_rails (4.1.0)
       railties (>= 5.0)
     builder (3.2.4)
@@ -330,6 +335,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin (~> 2.6, >= 2.6.1)
   bootsnap
+  bootstrap-sass
   breadcrumbs_on_rails
   byebug
   capybara

@@ -8,3 +8,5 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require_tree .
+//= require jquery3
+//= require bootstrap

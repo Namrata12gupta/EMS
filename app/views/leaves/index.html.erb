@@ -1,3 +1,4 @@
+<%if current_user.role.role_type != 'HR' %>
 <div class="card" style="width: 70rem;">
   <div class="card-body">
 	<h1>Leaves</h1>
@@ -23,10 +24,6 @@
 		      <td><%= leave.reason %></td>
 		     	<td><%= leave.leave_status %></td>  
 
-		     <!--  <td><%#= button_to 'Accept', leafe_path(leave, leave_status: 'accepted'), method: :put %></td> 
-
-		      <td><%#= button_to 'Reject', leafe_path(leave, leave_status: 'rejected'), method: :put %></td>  -->
-
 		      <td><%= button_to 'Cancel', leafe_path(leave, leave_status: 'cancel'), method: :put %></td> 
 
 		    </tr>
@@ -35,4 +32,4 @@
 		</table>
   	</div>
 </div>
-
+<% end %>

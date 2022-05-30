@@ -37,16 +37,13 @@
             </li>
             <% end %>
 
-              <img style= "height: 3rem; wedith: 3rem; margin-left: 29rem;" <%=image_tag("simplly.jpeg")%> 
+              <img style= "height: 3rem; wedith: 3rem; margin-left: 25rem;" <%=image_tag("simplly.jpeg")%> 
 
             <%= link_to 'Sign_out', destroy_user_session_path, data: {
                             turbo_method: :delete,
                             turbo_confirm: "Are you sure?"
                           } %>
             <% end %>
-
-          
-
         
           </ul>
         </div>

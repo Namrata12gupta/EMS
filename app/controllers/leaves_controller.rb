@@ -24,7 +24,11 @@ class LeavesController < ApplicationController
 
   def update
     @leave = Leave.find(params[:id])
-    @leave.update(leave_status: params[:leave_status])
+    if  @leave.from_date >= Time.now
+     @leave.update(leave_status: params[:leave_status])
+    else
+       
+    end
     redirect_to leaves_path
   end
 

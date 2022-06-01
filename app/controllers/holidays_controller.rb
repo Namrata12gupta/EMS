@@ -1,5 +1,6 @@
-class HolidaysController < ApplicationController
+# frozen_string_literal: true
 
+class HolidaysController < ApplicationController
   def index
     @holidays = Holiday.all
   end
@@ -24,6 +25,6 @@ class HolidaysController < ApplicationController
   private
 
   def holiday_params
-    params.require(:holiday).permit(:holiday_name,:date)
+    params.require(:holiday).permit(:holiday_name, :date)
   end
 end

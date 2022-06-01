@@ -2,12 +2,11 @@
 
 class LeafsController < ApplicationController
   def index
-    # @leaves = Leaf.all
     @leaves = current_user.leafs
   end
 
   def show
-    @leave = Leaf.find(params[:id])
+    @leave = current_user
   end
 
   def new
@@ -31,6 +30,6 @@ class LeafsController < ApplicationController
 
   def leave_params
     params.require(:leaf).permit(:leave_type, :from_date, :till_date, :leave_starts, :leave_end, :total_days,
-                                  :reason, :user_id)
+                                 :reason, :user_id)
   end
 end

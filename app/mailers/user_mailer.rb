@@ -16,9 +16,9 @@ class UserMailer < ApplicationMailer
   end
 
   def delete_notification(object)
-  @object = object
+    @object = object
     @object_count = object.class.count
 
-    mail to: 'user@gmail.com', subject: "An entry for #{object.class} has been deleted" 
+    mail to: 'user@gmail.com', subject: "An entry for #{object.class} has been deleted"
   end
 end

@@ -41,8 +41,8 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(params[:id])
-      # UserMailer.delete_notification(@user)
-      # deliver.now
+    # UserMailer.delete_notification(@user)
+    # deliver.now
     @user.destroy
     redirect_to root_path, status: :see_other
   end

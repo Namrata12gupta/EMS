@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   resources :roles
   resources :daily_statuses
-  resources :leaves
+  resources :leafs
 
   namespace :hr do
     resources :leaves

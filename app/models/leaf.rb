@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class Leave < ApplicationRecord
+class Leaf < ApplicationRecord
   belongs_to :user
   validate :not_past_date, on: :create
   enum :leave_status, %i[accepted rejected cancel]

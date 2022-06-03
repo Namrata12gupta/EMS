@@ -24,12 +24,14 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="<%= leaves_path(current_user.id) %>">Leave Status</a>
+              <a class="nav-link" href="<%= leafs_path(current_user.id) %>">Leave Status</a>
             </li>
 
+            <%if current_user.role.role_type == 'HR' %>
             <li class="nav-item">
               <a class="nav-link" href="<%= "/users/:id/edit"%>">EditUser</a>
             </li>
+            <% end %>
 
             <%if current_user.role.role_type == 'HR' %>
              <li class="nav-item">

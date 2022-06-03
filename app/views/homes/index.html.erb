@@ -40,6 +40,7 @@
 <body>
 
 <%=image_tag("simplly.jpeg")%>
+
 <footer id="footer">
  <!--  <header id="header" class="fixed-top"> -->
       <!-- Uncomment below if you prefer to use an image logo -->
@@ -75,7 +76,7 @@
               <li><i class="bx bx-chevron-right"></i> <a href="<%= root_path %>">Home</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<%= "/users/:user_id/attendances/:id" %>">Attendance</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<%=daily_statuses_path %>">DailyStatus</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="<%= leaves_path(current_user.id) %>">LeaveStatus</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="<%= leafs_path(current_user.id) %>">LeaveStatus</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="<%= "/users/:id/edit"%>">EditUser</a></li>
               <%if current_user.role.role_type == 'HR' %>
               <li><i class="bx bx-chevron-right"></i> <a href="<%= hr_leaves_path %>">HR</a></li>

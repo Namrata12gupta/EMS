@@ -3,11 +3,11 @@
 module Hr
   class LeavesController < ApplicationController
     def index
-      @leaves = Leave.all
+      @leaves = Leaf.all
     end
 
     def update
-      @leave = Leave.find(params[:id])
+      @leave = Leaf.find(params[:id])
       @leave.update(leave_status: params[:leave_status])
       UserMailer.update_notification(@leave).deliver_now
       redirect_to hr_leaves_path

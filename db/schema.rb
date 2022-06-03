@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_03_094532) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_03_114851) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -97,6 +97,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_03_094532) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.index ["user_id"], name: "index_daily_statuses_on_user_id"
+  end
+
+  create_table "holidays", force: :cascade do |t|
+    t.string "holiday_name"
+    t.date "date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "leafs", force: :cascade do |t|

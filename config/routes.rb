@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get 'home/index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
@@ -19,6 +18,7 @@ Rails.application.routes.draw do
   resources :roles
   resources :daily_statuses
   resources :leafs
+  resources :holidays
 
   namespace :hr do
     resources :leaves

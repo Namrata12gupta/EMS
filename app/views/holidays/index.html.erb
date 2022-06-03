@@ -1,0 +1,19 @@
+<h1>HoliDays</h1>
+    <%if current_user.role.role_type == 'HR' %>
+    <div><%= link_to 'Add Holiday', new_holiday_path, class: "btn btn-light"%></div><br>
+    <% end %>
+
+<table class="table table-hover" style="width: 70rem;">
+   <thead>
+        <tr>
+          <th scope="col">Leave Type</th>
+          <th scope="col">Leave Type</th>
+        </tr>
+      </thead>
+        <% @holidays.each do |holiday| %>
+        <tr>
+          <td><%= holiday.holiday_name %></td>
+          <td><%= holiday.date %></td>
+        </tr>
+        <% end %>
+</table>

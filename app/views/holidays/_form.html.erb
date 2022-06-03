@@ -1,0 +1,15 @@
+<%= form_with model: @holiday do |form| %>
+  <div>
+    <%= form.label :holiday_name %><br>
+    <%= form.text_field :holiday_name %>
+  </div>
+
+  <div>
+    <%= form.label :date %><br>
+    <%= form.date_field :date %><br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

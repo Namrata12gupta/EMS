@@ -39,6 +39,10 @@
             </li>
             <% end %>
 
+            <li class="nav-item">
+              <a class="nav-link" href="<%= holidays_path %>">Holidays</a>
+            </li>
+
               <img style= "height: 3rem; wedith: 3rem; margin-left: 25rem;" <%=image_tag("simplly.jpeg")%> 
 
             <%= link_to 'Sign_out', destroy_user_session_path, data: {
